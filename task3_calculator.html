@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <style type="text/css">
+            body{
+                background-color: cadetblue;
+            }
+            .tab1{
+                width:200px;
+                border-color: red;
+                border-radius: 10px;
+                border-style: solid;
+            }
+            #i1{
+                width:200px;
+            }
+        </style>
+        <script language="javascrit">
+            function clearscreen(){
+                document.getElementById("i1").innerHTML="";
+            document.getElementById("i1").style.borderColor="gray";
+            document.getElementById("i1").style.color="black";
+            document.getElementById("i1").value="";
+            }
+        </script>
+        <body>
+        <h2 align="center">Calculator</h2>
+        <form name="f1" id="f1" method="post" action="">
+        <table  class="tab1" align="center" border="10">
+            <tr>
+           <th colspan=4><input type="text" name="i1" id="i1"></th></tr>
+            <tr>
+                <th bgcolor="orange"><input type="button" name="s1" id="s1" value="+" style="background-color: orange;" onclick="f1.i1.value+='+'"></th>
+                <th bgcolor="green"><input type="button" name="s2" id="s2" value="-" style="background-color:rgb(16, 126, 16)"onclick="f1.i1.value+='-'"></th>
+                <th bgcolor="violet"><input type="button" name="s3" id="s3" value="*" style="background-color:rgb(228, 22, 228)" onclick="f1.i1.value+='*'"></th>
+                <th bgcolor="yellow"><input type="button" name="s4" id="s4" value="/" style="background-color:rgb(244, 244, 21)" onclick="f1.i1.value+='/'"></th>
+            </tr>
+            <tr>
+                <th input type="button" id="num1" name="num1" onclick="f1.i1.value +='7'">7</th>
+                <th input type="button" id="num2" name="num2" onclick="f1.i1.value+='8'">8</th>
+                <th input type="button" id="num3" name="num3" onclick="f1.i1.value+='9'">9</th>
+                <th rowspan="4" bgcolor="lightblue" onclick="f1.i1.value=eval(f1.i1.value)">=</th>
+            </tr>
+            <tr>
+                <th input type="button" id="num4" name="num4" onclick="f1.i1.value+='4'">4</th>
+                <th input type="button" id="num5" name="num5" onclick="f1.i1.value+='5'">5</th>
+                <th input type="button" id="num6" name="num6" onclick="f1.i1.value+='6'">6</th>
+            </tr>
+                <tr>
+                    <th input type="button" id="num7" name="num7" onclick="f1.i1.value+='1'">1</th>
+                    <th input type="button" id="num8" name="num8" onclick="f1.i1.value+='2'">2</th>
+                    <th input type="button" id="num9" name="num9" onclick="f1.i1.value+='3'">3</th>
+                </tr>
+                <tr>
+                    <th input type="button" id="num10" name="num10" onclick="f1.i1.value+='0'">0</th>
+                    <th input type="button" id="num11" name="num11" onclick="f1.i1.value+='.'">.</th>
+                    <th input type="button" id="num12" name="num12" value="C" onclick="return clearscreen()">C</th>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>
